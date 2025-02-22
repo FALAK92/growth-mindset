@@ -51,8 +51,9 @@ if uploaded_files:
 				if st.button(f"Remove duplicates from the file: {file.name}"):
 					df.drop_duplicates(inplace=True)
 					st.success(" ☑️ Duplicates removed successfully!")
+			with col2:		
 
-	 with col2:
+	 
 				if st.button(f"Remove missing values from the file: {file.name}"):
 					numeric_cols = df.select_dtypes(include=["number"]).columns
 					df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].mean())
