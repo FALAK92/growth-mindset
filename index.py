@@ -13,55 +13,79 @@ st.set_page_config(page_title="Data Sweeper", layout="wide")
 st.markdown(
     """
     <style>
-        .main {
-            background-color: #121212;  /* Overall dark background for the main page */
-        }
-        .block-container {
-            padding: 3rem 2rem;  /* Padding around main container for spacing */
-            border-radius: 12px;  /* Rounds the corners of the container */
-            background-color: #1e1e1e;  /* Slightly lighter shade for contrast */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  /* Adds subtle shadow for depth */
-        }
-        h1, h2, h3, h4, h5, h6 {
-            color: #66c2ff;  /* Light blue color for headings to stand out */
-        }
-        .stButton>button {
-            border: none;
-            border-radius: 8px;  /* Rounds button edges */
-            background-color: #0078D7;  /* Primary blue for buttons */
-            color: white;  /* White text for contrast */
-            padding: 0.75rem 1.5rem;  /* Enlarges button for better interaction */
-            font-size: 1rem;  /* Readable button text */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);  /* Shadow for button depth */
-        }
-        .stButton>button:hover {
-            background-color: #005a9e;  /* Darker blue on hover for visual feedback */
-            cursor: pointer;
-        }
-        .stDataFrame, .stTable {
-            border-radius: 10px;  /* Smooth edges for data tables and frames */
-            overflow: hidden;  /* Prevents data from overflowing the container */
-        }
-        .css-1aumxhk, .css-18e3th9 {
-            text-align: left;
-            color: white;  /* Ensures all standard text is white for readability */
-        }
-        .stRadio>label {
-            font-weight: bold;
-            color: white;
-        }
-        .stCheckbox>label {
-            color: white;
-        }
-        .stDownloadButton>button {
-            background-color: #28a745;  /* Green color for download buttons */
-            color: white;
-        }
-        .stDownloadButton>button:hover {
-            background-color: #218838;  /* Darker green on hover for download buttons */
-        }
-    </style>
-    """,
+    /* Overall Page Styling */
+    .main {
+        background-color: #121212;
+        font-family: 'Poppins', sans-serif;  /* Modern Font */
+    }
+
+    /* Main Container */
+    .block-container {
+        padding: 3rem;
+        border-radius: 15px;
+        background-color: #1e1e1e;
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1); /* Softer Shadow */
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        color: #66c2ff;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Buttons */
+    .stButton>button {
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #0078D7, #005a9e);
+        color: white;
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 120, 215, 0.5);
+    }
+
+    .stButton>button:hover {
+        background: linear-gradient(135deg, #005a9e, #003f7f);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    /* Tables & Data Frames */
+    .stDataFrame, .stTable {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 10px;
+    }
+
+    /* Radio & Checkboxes */
+    .stRadio>label, .stCheckbox>label {
+        font-weight: bold;
+        color: white;
+    }
+
+    /* Download Button */
+    .stDownloadButton>button {
+        background: linear-gradient(135deg, #28a745, #218838);
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 12px 18px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .stDownloadButton>button:hover {
+        background: linear-gradient(135deg, #218838, #1e7e34);
+        transform: scale(1.05);
+    }
+ </style>
+        """,
     unsafe_allow_html=True  # 'unsafe_allow_html' permits raw HTML/CSS embedding in the Streamlit app
 )
 
